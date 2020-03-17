@@ -2,7 +2,15 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="0; url=https://blog.tadadakcode.com/"/>
+        <script language = javascript>
+            var chg_reg = /(https:\/\/tadadakcode.com)(\/[0-9])(\?.*)?/g
+            var online = document.URL;
+            if(online.match(chg_reg)){
+            document.location.href = online.replace(chg_reg, "https:\/\/blog.tadadakcode.com$2$3");
+            }
+        </script>
+
+
         <title>Page Redirection</title>
     </head>
 </html>
